@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Lato',sans-serif;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+}
+
+/*Main PAje*/
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   overflow:hidden;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+    animation: zoom 3s linear infinite;
+  
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7) ;
+    position: absolute; 
+    top: 0;
+}
+/*navbar*/
+.navbar{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    
+}
+.logo{
+    flex-basis: 15%;
+}
+.logo img{
+
+    width: 120px;
+
+    cursor: pointer;    
+}
+.menu-bar{
+    display: flex;
+}
+.menu-bar ul{
+    display: flex;
+}
+.menu-bar ul li{
+    display: flex;
+    padding: 20px;
+}
+.menu-bar ul li a{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0.8;
+}
+.menu-bar ul li a:hover{
+    color: red;
+    transition: 0.5s;
+
+}
+.menu-bar i{
+    color: white;
+}
+.menu-bar i:hover{
+    color: red;
+}
+/*Content*/
+.content{
+    display: flex;
+    text-align: center;
+    
+}
+.content img{
+    width: 500px;
+    height: 700px;
+     top: 0;
+     margin-left: 100px;
+     animation: slideInFromLeft 2s ease-in;
+  
+}
+.content h1{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+   margin-top: 100px;
+   font-weight: 900;
+   
+    
+}
+.content h3{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+   padding-top: 10px;
+    
+ 
+    
+}
+.content .para{
+    margin-top: 100px;
+    animation: slideInFromRight 1s ease-in;
+    font-family: 'popins'sans-serif;
+}
+.content button{
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 25px;
+  
+ 
+   
+   
+}
+.content button a{
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+}
+.content .btn-1:hover{
+    background: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+.btnn{
+    margin-bottom: 100px;
+    
+}
+.btn-1{
+    background: #ff0000;
+    border: 2px solid #fd0000;
+}
+.btn-2{
+    border: 2px solid #fff;
+    background: transparent;
+}
+.btn-2:hover{
+    background-color: #ff0000;
+    border: 2px solid #fd0000;
+}
+
+@media (max-width:991px) {
+    .banner{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        position: relative;
+      
+        overflow:visible;
+    }
+    .slider #slideimg{
+      display: none;
+      
+    }
+    .slider {
+      display: none;
+    }
+    .navbar{
+        display: block;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 15px;
+
+    }
+    .navbar ul{
+        
+        
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-bar ul li a{
+        font-size: 15px;
+    }
+    .content img{
+        width: 400px;
+        height: 500px;
+         top: 0;
+       
+         
+        
+      
+    }
+    .para{
+        text-align: center;
+        
+        
+        
+
+    }
+ 
+    .content {
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+    .overlay{
+        width: 100%;
+        height: auto;
+               background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("../images/7.jpg") center/cover no-repeat;
+    }
+    .content h1{
+        color: gold;
+        font-family: 'Rajdhani', sans-serif;
+       font-size: 30px;
+       font-weight: 800;
+       margin-bottom: 100px;
+       
+        
+    }
+    .content h3{
+        color: white;
+        font-family: 'popins', sans-serif;
+       padding-top: 0;
+       opacity: 0.8;
+       font-size: 20px;
+       line-height: 30px;
+        
+     
+        
+    }
+    .content button{
+        width: 200px;
+        padding: 12px 0;
+        text-align: center;
+        margin: 0 10px;
+        border-radius: 25px;
+        margin-top: 100px;
+      
+     
+       
+       
+    }
+  
+   
+
+   
+}
+
+
+
+
+
+
+/*Animations*/
+@keyframes slideInFromLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromRight {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes zoom{
+    0%{
+       transform: scale(1.3);
+    }
+  15%{
+    transform: scale(1);
+  }
+  85%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.3);
+  }
+    }
+
+
+
